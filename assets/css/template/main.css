@@ -21,10 +21,10 @@ h6 {
 }
 
 .mainDescription {
-  margin-bottom: 2em;
   margin-top: 2em;
   padding-bottom: 1em;
   border-bottom: 1px solid black;
+  margin-bottom: 2em;
 }
 
 .mainDescription ul {

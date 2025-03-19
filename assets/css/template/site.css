@@ -61,3 +61,7 @@ button {
 footer {
   width: 600px;
 }
+
+.footerInfo {
+  margin-top: 30px;
+}
