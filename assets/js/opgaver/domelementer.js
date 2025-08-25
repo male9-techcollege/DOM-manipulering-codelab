@@ -9,11 +9,11 @@ Du skal finde elementet med id="yellowFigure" og console logge det.
 
 // din kode her
 
-const myRedFigure=document.getElementById('redFigure');
-console.log(myRedFigure);
+const myRedFigureByMariePierreLessard=document.getElementById('redFigure');
+console.log(myRedFigureByMariePierreLessard);
 
-const myYellowFigure=document.getElementById('yellowFigure');
-console.log(myYellowFigure);
+const myYellowFigureByMariePierreLessard=document.getElementById('yellowFigure');
+console.log(myYellowFigureByMariePierreLessard);
 
 
 /* opgave 1.2
@@ -24,8 +24,8 @@ farven på elementerne skal være blå. brug evt. elelement.style.backgroundColo
 
 // din kode her
 
-myRedFigure.style.backgroundColor='blue'; 
-myYellowFigure.style.backgroundColor='blue'; 
+myRedFigureByMariePierreLessard.style.backgroundColor='blue'; 
+myYellowFigureByMariePierreLessard.style.backgroundColor='blue'; 
 
 
 /* opgave 2.1
@@ -64,19 +64,19 @@ const eOpgaveTwo = document.getElementById('opgaveTwo');
 eOpgaveTwo.appendChild(nyH2);
 */
 
-/* Solution: append the elements to be added to a container, then append the container to sth in the DOM. */
-let newH2 = document.createElement('h2');
-newH2.innerText = 'Opgave 2.1 løsning';
+/* Student's note: solution: append the elements to be added to a container, then append the container to sth in the DOM. */
+let newH2ByMariePierreLessard = document.createElement('h2');
+newH2ByMariePierreLessard.innerText = 'Opgave 2.1 løsning';
 
-let newP = document.createElement('p');
-newP.innerText = 'Jeg har løst opgave 2.1';
+let newParByMariePierreLessard = document.createElement('p');
+newParByMariePierreLessard.innerText = 'Jeg har løst opgave 2.1';
 
-let newSection = document.createElement('section');
-newSection.appendChild(newH2);
-newSection.appendChild(newP);
+let newSectionByMariePierreLessard = document.createElement('section');
+newSectionByMariePierreLessard.appendChild(newH2ByMariePierreLessard);
+newSectionByMariePierreLessard.appendChild(newParByMariePierreLessard);
 
-const eOpgaveTwo = document.getElementById('opgaveTwo');
-eOpgaveTwo.appendChild(newSection);
+const eOpgaveTwoByMariePierreLessard = document.getElementById('opgaveTwo');
+eOpgaveTwoByMariePierreLessard.appendChild(newSectionByMariePierreLessard);
 
 
 // opgave 3 liveHTML lists
@@ -86,8 +86,8 @@ Du skal finde alle elementer med klassen purpleFigures og console logge resultat
 
 // din kode her
 
-let myPurpleFigures = document.getElementsByClassName('purpleFigures');
-console.log(myPurpleFigures);
+let myPurpleFiguresByMariePierreLessard = document.getElementsByClassName('purpleFigures');
+console.log(myPurpleFiguresByMariePierreLessard);
 
 
 /* opgave 3.2
@@ -101,25 +101,29 @@ eller bruge querySelectorAll og foreach til at loope.
 
 /* Løsning 1 med array.from og map() metoden (med hjælp fra Bo) */
 
-/* First, you have to define the array because myPurpleFigures is not an array yet, it is a HTML collection. */
-let myArray = Array.from(myPurpleFigures);
-console.log(myArray);
-/* element is what is called a parameter catcher in this anonymous function, it is not a variable or a name for the function! */
-myArray.map((element) => {
+/* Student's note: first, you have to define the array because myPurpleFigures is not an array yet, it is a HTML collection. (Array.from makes an array out of sth.) */
+let myArrayByMariePierreLessard = Array.from(myPurpleFiguresByMariePierreLessard);
+console.log(myArrayByMariePierreLessard);
+/* Student's note: in this anonymous function, the parentheses around element are what is called a parameter catcher; element is a parameter, it is not a variable or a name for the function! */
+myArrayByMariePierreLessard.map((element) => {
     element.style.backgroundColor='red';
 });
 
 /* Løsning 2 med querySelectorAll (virker) */
 
-/* If I reuse "let myPurpleFigures" (see 3.1), all my previous answers disappear (it bugs)! It is because a variable cannot be declared twice (with let or const). 
-Solution: just don't write let in front of the expression (a line in JavaScript). The text between quotation marks is a string. document er et objekt. querySelectorAll() is a method. 
-querySelectorAll is always preceded by document: document.querySelectorAll; often used with forEach, which applies to an array. 
+/* Student's note: if I reuse "let myPurpleFigures" (see 3.1), all my previous answers disappear (it bugs)! It is because a variable cannot be declared twice (with let or const). 
+Solution: just don't write let in front of the expression.
+Terminology: 
+An expression is often a line that ends with ; in our JavaScript exercises. 
+The text between quotation marks is a string. 
+document er et object. 
+querySelectorAll() is a method. querySelectorAll() is always preceded by document or a variable that identifies a part of a document: document.querySelectorAll; often used with forEach, which applies to an array. 
 turnRed is a parameter.
 
-myPurpleFigures = document.querySelectorAll('.purpleFigures');
-myPurpleFigures.forEach(turnRed);
-function turnRed(myPurpleFigures) {
-    myPurpleFigures.style.backgroundColor='red';
+myPurpleFiguresByMariePierreLessard = document.querySelectorAll('.purpleFigures');
+myPurpleFiguresByMariePierreLessard.forEach(turnRedByMariePierreLessard);
+function turnRedByMariePierreLessard(myPurpleFiguresByMariePierreLessard) {
+    myPurpleFiguresByMariePierreLessard.style.backgroundColor='red';
 }   
 */
 
@@ -133,19 +137,20 @@ myElement.children[0].innerHTML til at ændre 1. child elements inner html.
 
 /* Løsning 1 (foreach kombineret med array.from metoden) (virker) */
 
-myArray.forEach(textTurnsRed);
-function textTurnsRed(myPurpleFigures) {
-    myPurpleFigures.style.color='darkred';
+myArrayByMariePierreLessard.forEach(textTurnsRedByMariePierreLessard);
+function textTurnsRedByMariePierreLessard(myPurpleFiguresByMariePierreLessard) {
+    myPurpleFiguresByMariePierreLessard.style.color='darkred';
 }
 
 /* Løsning 2 med querySelectorAll og foreach (virker) 
 
-myPurpleFigures.forEach(textTurnsRed);
-function textTurnsRed(myPurpleFigures) {
-    myPurpleFigures.style.color='darkred';
+myPurpleFiguresByMariePierreLessard.forEach(textTurnsRedByMariePierreLessard);
+function textTurnsRedByMariePierreLessard(myPurpleFiguresByMariePierreLessard) {
+    myPurpleFiguresByMariePierreLessard.style.color='darkred';
 }   
 */
 
+/* Elevsnotat: målet var at blive færdig med så mange øvelser som muligt. Opgave 4 er udenfor pensum. */
 
 /* opgave 4
 opret DOM elementer i elementet med id opgaveFour, udfra data objectet myData.
@@ -162,6 +167,5 @@ const myData = {
 
 // din kode her
 
-/* Elevsnotat: målet var at blive færdig med så mange øvelser som muligt. Opgave 4 er udenfor pensum. */
 
 
